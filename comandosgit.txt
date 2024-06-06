@@ -1,4 +1,9 @@
-git status                  // ver el estado de los archivos cargados al repositorio
-git add nombre del archivo  // agrega el archivo al repositorio
-git add .                   // agrega todos los archivos al repositorio
-git commit -m "mensaje"     // agrega un mensaje a la version cargada del archivo
+git status                              // ver el estado de los archivos cargados al repositorio
+git add nombre del archivo              // agrega el archivo al repositorio
+git add .                               // agrega todos los archivos al repositorio
+git commit -m "mensaje"                 // agrega un mensaje a la version cargada del archivo
+git config                              // muestra configuraciones que tiene git
+git config --list                       // muestra todas las configuraciones que tiene git
+git config --list --show-origin         // muestra donde estan las configuraciones guardadas
+git config --global user.name "nombre"  //registra el nombre para git
+git config --global user.email "correo" //registra el correo para git
