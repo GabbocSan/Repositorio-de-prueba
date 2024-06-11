@@ -19,7 +19,7 @@ git checkout -nombre de la rama                    // Con este comando puedes sa
 git checkout -b rama                               // Genera una rama y nos mueve a ella automáticamente, Es decir, es la combinación de git branch y git checkout al mismo tiempo.
 git reset id-commit                                // Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el historial de los commit posteriores al tag seleccionado.
 git checkout rama-o-id-commit                      // Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado.
-
+git merge nombre de la rama                        // Fusiona el archivo creado en la rama a la master, se debe estar en master para usar este comando
 
 
 git config                                   // muestra configuraciones que tiene git
