@@ -21,6 +21,11 @@ git reset id-commit                                // Nos lleva a cualquier comm
 git checkout rama-o-id-commit                      // Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado.
 git merge nombre de la rama                        // Fusiona el archivo creado en la rama a la master, se debe estar en master para usar este comando
 git merge --abort                                  // para que es
+eval $(ssh-agent -s)                               // comprobar si la llave ssh esta funcionando
+ssh-add ~/.ssh/id_rsa                              // agregar la llave al main 
+git remote add origin (url del repositorio)        // Agregar el repositorio de github a git
+git remote -v                                      // ayuda a comprobar el origen
+git push origin master                             // agrega los archivos al repositorio de github
 
 
 git config                                   // muestra configuraciones que tiene git
