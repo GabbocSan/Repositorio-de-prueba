@@ -1,31 +1,46 @@
-git status                                         // ver el estado de los archivos cargados al repositorio
-git add nombre del archivo                         // agrega el archivo al repositorio
-git add .                                          // agrega todos los archivos al repositorio
-git init .                                         // crea un nuevo repositorio de git
-git commit -m "mensaje"                            // agrega un mensaje a la version cargada del archivo
-git log nombre del archivo                         // muestra los registros historicos del archivo
-git log --stat                                     // muestra los registros historicos del archivo com mas detalle
-git show nombre del archivo                        // muestra los cambios que se hicieron al archivo
-git diff codigo de commit1 codigo de commit2       // compara dos versiones de un archivo 
-git reset codigo de commit1 --hard                 // todo vuelve al estado anterior (volver en el tiempo)
-git reset codigo de commit1 --soft                 // el directorio de trabajo vuelve a la version anterior pero se peude hacer commit 
-git checkout codigo de commit1 nombre del archivo  // se regresa la version anterior del archivo (si se le da commit se gurada el archivo se debe tener cuidado)
-git reset --mixed                                  // Borra todo, exactamente todo. Toda la información de los commits y del área de staging se elimina del historial.
-git reset HEAD                                     // permite revertir los cambios que ya habías preparado para subir, y moverlos de vuelta a tu proyecto. Con este comando puedes cancelar los cambios que ya habías agregado, para que puedas revisarlos, modificarlos o deshacerlos antes de confirmarlos con un commit.
-git rm --cached                                    // Elimina archivos del repositorio local y del área de staging, pero los mantiene en el disco duro. Deja de trackear el historial de cambios de estos archivos, por lo que quedan en estado untracked.
-git rm --force                                     // Elimina los archivos de Git y del disco duro. Git guarda todo, por lo que podemos recuperar archivos eliminados si es necesario (empleando comandos avanzados).
-git branch Nombre de la rama                       // Las ramas (branches) son la forma de hacer cambios en nuestro proyecto sin afectar el flujo de trabajo de la rama principal
-git checkout -nombre de la rama                    // Con este comando puedes saltar de una rama a otra.
-git checkout -b rama                               // Genera una rama y nos mueve a ella automáticamente, Es decir, es la combinación de git branch y git checkout al mismo tiempo.
-git reset id-commit                                // Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el historial de los commit posteriores al tag seleccionado.
-git checkout rama-o-id-commit                      // Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado.
-git merge nombre de la rama                        // Fusiona el archivo creado en la rama a la master, se debe estar en master para usar este comando
-git merge --abort                                  // para que es
-eval $(ssh-agent -s)                               // comprobar si la llave ssh esta funcionando
-ssh-add ~/.ssh/id_rsa                              // agregar la llave al main 
-git remote add origin (url del repositorio)        // Agregar el repositorio de github a git
-git remote -v                                      // ayuda a comprobar el origen
-git push origin master                             // actualiza los archivos al repositorio de github
+git status                                                       // ver el estado de los archivos cargados al repositorio
+git add nombre del archivo                                       // agrega el archivo al repositorio
+git add .                                                        // agrega todos los archivos al repositorio
+git init .                                                       // crea un nuevo repositorio de git
+git commit -m "mensaje"                                          // agrega un mensaje a la version cargada del archivo
+git log nombre del archivo                                       // muestra los registros historicos del archivo
+git log --stat                                                   // muestra los registros historicos del archivo com mas detalle
+git show nombre del archivo                                      // muestra los cambios que se hicieron al archivo
+git diff código de commit1 código de commit2                     // compara dos versiones de un archivo 
+git reset código de commit1 --hard                               // todo vuelve al estado anterior (volver en el tiempo)
+git reset código de commit1 --soft                               // el directorio de trabajo vuelve a la version anterior pero se peude hacer commit 
+git checkout código de commit1 código del archivo                // se regresa la version anterior del archivo (si se le da commit se gurada el archivo se debe tener cuidado)
+git reset --mixed                                                // Borra todo, exactamente todo. Toda la información de los commits y del área de staging se elimina del historial.
+git reset HEAD                                                   // permite revertir los cambios que ya habías preparado para subir, y moverlos de vuelta a tu proyecto. Con este comando puedes cancelar los cambios que ya habías agregado, para que puedas revisarlos, modificarlos o deshacerlos antes de confirmarlos con un commit.
+git rm --cached                                                  // Elimina archivos del repositorio local y del área de staging, pero los mantiene en el disco duro. Deja de trackear el historial de cambios de estos archivos, por lo que quedan en estado untracked.
+git rm --force                                                   // Elimina los archivos de Git y del disco duro. Git guarda todo, por lo que podemos recuperar archivos eliminados si es necesario (empleando comandos avanzados).
+git branch Nombre de la rama                                     // Las ramas (branches) son la forma de hacer cambios en nuestro proyecto sin afectar el flujo de trabajo de la rama principal
+git checkout nombre de la rama                                   // Con este comando puedes saltar de una rama a otra.
+git checkout -b rama                                             // Genera una rama y nos mueve a ella automáticamente, Es decir, es la combinación de git branch y git checkout al mismo tiempo.
+git reset id-commit                                              // Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el historial de los commit posteriores al tag seleccionado.
+git checkout rama-o-id-commit                                    // Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado.
+git merge nombre de la rama                                      // Fusiona el archivo creado en la rama a la master, se debe estar en master para usar este comando
+git merge --abort                                                // para que es
+eval $(ssh-agent -s)                                             // comprobar si la llave ssh esta funcionando
+ssh-add ~/.ssh/id_rsa                                            // agregar la llave al main 
+git remote add origin (url del repositorio)                      // Agregar el repositorio de github a git
+git remote -v                                                    // ayuda a comprobar el origen
+git push origin nombre de la rama                                // actualiza los archivos al repositorio desde git hacia github
+git pull origin nombre de la rama                                // actualiza los archivos al repositorio desde github hacia git
+git log --all                                                    // muestra todos los historicos 
+git log --all --graph                                            // muestra como un grafico con las ramas creadas
+git log --all --graph --decorate --oneline                       // muestra como un grafico con las ramas creadas resumido
+git tag -a vX.x -m "Mensaje de la version" codigo de la version  // define que version del archivo es
+git tag                                                          // muestra todas las vesiones del archivo en las que se esta trabajando
+git show-ref --tags                                              // muestra a que archivo esta asociada la version
+git push origin --tags                                           // Agrega todas las versiones al repositorio de github
+git tag -d version                                               // Elimina la version 
+git push origin :refs/tags/version                               // Elimina la version de github
+git show-branch                                                  // muestra todos los cambios en las cabeceras
+git show-branch --all                                            // muestra los cambios en las cabeceras con mas detalle
+gitk                                                             // abre un programa de una version visual de las cabeceras
+
+
 
 
 git config                                   // muestra configuraciones que tiene git
