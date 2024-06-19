@@ -41,6 +41,10 @@ git show-branch --all                                            // muestra los 
 gitk                                                             // abre un programa de una version visual de las cabeceras
 git stash
 git stash pop
+git cherry-pick commit
+git cherry-pick --abort
+
+
 
 Master
 
