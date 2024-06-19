@@ -40,7 +40,7 @@ git show-branch                                                  // muestra todo
 git show-branch --all                                            // muestra los cambios en las cabeceras con mas detalle
 gitk                                                             // abre un programa de una version visual de las cabeceras
 
-
+Master
 
 
 
