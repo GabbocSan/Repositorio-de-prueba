@@ -43,6 +43,7 @@ gitk                                                             // abre un prog
 
 
 
+
 git config                                   // muestra configuraciones que tiene git
 git config --list                            // muestra todas las configuraciones que tiene git
 git config --list --show-origin              // muestra donde estan las configuraciones guardadas
