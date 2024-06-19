@@ -39,11 +39,8 @@ git push origin :refs/tags/version                               // Elimina la v
 git show-branch                                                  // muestra todos los cambios en las cabeceras
 git show-branch --all                                            // muestra los cambios en las cabeceras con mas detalle
 gitk                                                             // abre un programa de una version visual de las cabeceras
-<<<<<<< HEAD
-=======
-experimento 1
-experimento 2
->>>>>>> 1466609 (Experimento 1)
+git stash
+git stash pop
 
 Master
 
